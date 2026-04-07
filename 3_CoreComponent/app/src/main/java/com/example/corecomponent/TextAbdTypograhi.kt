@@ -30,9 +30,3 @@ fun SimpleText() {
 
 }
 
-@Preview(showSystemUi = true)
-@Composable
-fun GetPreview() {
-    SimpleText()
-
-}
