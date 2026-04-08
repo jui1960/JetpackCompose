@@ -1,7 +1,7 @@
 package com.example.corecomponent
-
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.OutlinedTextField
@@ -69,7 +69,7 @@ fun PasswordField() {
         mutableStateOf("")
     }
 
-    Box(modifier = Modifier.size(600.dp), contentAlignment = Alignment.BottomCenter){
+    Box(modifier = Modifier.size(600.dp), contentAlignment = Alignment.BottomCenter) {
         TextField(
             value = password,
             onValueChange = {
@@ -78,13 +78,40 @@ fun PasswordField() {
             label = {
                 Text("enter your pass")
             },
-            visualTransformation = PasswordVisualTransformation()
-            , keyboardOptions = KeyboardOptions(
+
+            visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Password
             )
 
         )
 
+    }
+
+}
+
+
+@Composable
+fun Name() {
+    var myName by remember {
+        mutableStateOf("")
+    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize(), contentAlignment = Alignment.TopStart
+    ) {
+        TextField(
+            value = myName,
+            onValueChange = {
+                myName = it
+
+            },
+            label = {
+                Text("Enter Name")
+            },
+            modifier = Modifier.padding(90.dp),
+
+            )
     }
 }
 
@@ -93,5 +120,5 @@ fun PasswordField() {
 fun GetPreview() {
     SimpleOutlineField()
     PasswordField()
-
+    Name()
 }
