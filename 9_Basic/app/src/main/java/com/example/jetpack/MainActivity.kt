@@ -15,13 +15,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            AppNavigation()
+/*
             NoteAppExample()
+*/
         }
     }
 
 }
 
-/*
 @Composable
 fun AppNavigation() {
     var showLoginScreen by remember { mutableStateOf(true) }
@@ -42,7 +44,6 @@ fun AppNavigation() {
         )
     }
 }
-*/
 
 
 
