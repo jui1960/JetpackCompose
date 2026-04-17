@@ -91,7 +91,7 @@ fun CounterExample() {
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = "Item Click $count", fontSize = 30.sp, fontStyle = FontStyle.Italic,
+                        text = "Item Clicked $count", fontSize = 30.sp, fontStyle = FontStyle.Italic,
                         textAlign = TextAlign.Center
                     )
                 }
